@@ -1,0 +1,28 @@
+@import '~@nebular/theme/styles/theming';
+@import '~@nebular/theme/styles/themes/default';
+@import '~@nebular/theme/styles/themes/dark';
+
+
+$nb-themes: nb-register-theme((
+
+  // add your variables here like:
+
+  // color-basic-100: hsl(0, 0%, 100%),
+  // color-basic-200: hsl(0, 0%, 100%),
+  // color-basic-300: hsl(0, 0%, 98%),
+  // color-basic-400: hsl(0, 00%, 98%),
+  // color-basic-500: hsl(0, 0%, 98%),
+  // color-basic-600: hsl(0, 0%, 52%),
+  // color-basic-700: hsl(200, 15%, 8%),
+  // color-basic-800: hsl(200, 15%, 8%),
+  // color-basic-900: hsl(200, 15%, 8%),
+  // color-basic-1000: hsl(200, 15%, 8%),
+  // color-basic-1100: hsl(200, 15%, 8%),
+  // text-basic-color: hsl(200, 15%, 8%), 
+  // background-basic-color-4: hsl(0, 0%, 98%),
+), default, default);
+
+$nb-themes: nb-register-theme((
+  // text-basic-color: color-basic-800, 
+  // text-disabled-color: color-basic-600,
+), dark, dark);

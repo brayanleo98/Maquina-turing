@@ -1,0 +1,19 @@
+.title {
+    display        : flex;
+    justify-content: space-between;
+    width          : 100%;
+}
+
+.txtH3 {}
+
+.txtBtn {}
+
+@media screen and (max-width:375px) {
+    .txtH3 {
+        font-size: 0.875rem;
+    }
+
+    .txtBtn {
+        font-size: xx-small !important;
+    }
+}

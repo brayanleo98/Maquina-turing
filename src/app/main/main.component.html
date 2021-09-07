@@ -1,0 +1,39 @@
+<h3>Maquina de turing</h3>
+<nb-card class="divCard">
+    <nb-card-header class="header">
+        <div style="display: grid;">
+            <input type="text" nbInput status="primary" placeholder="Digite la entrada" [(ngModel)]="entrada">
+            <button style="margin-top: 1rem;" status="primary" nbButton outline
+                (click)="validarEntrada()">Ingresar</button>
+        </div>
+    </nb-card-header>
+    <nb-card-body>
+
+        <div style="display: grid; justify-content: center;" *ngIf="bolEstado">
+            <input type="number" nbInput status="primary" placeholder="Numero de estados" [(ngModel)]="estados">
+            <button style="margin-top: 1rem;" status="primary" nbButton outline
+                (click)="validarEstados()">Ingresar</button>
+            <br>
+        </div>
+        <div *ngIf="bolInfo">
+            <h5>Digite los valores</h5>
+            <div class="row" *ngFor="let obj of listEstados">
+                <input class="col-lg " style="margin-top: 1rem;" type="text" nbInput status="primary"
+                    [(ngModel)]="obj.nomEstado" placeholder="Nombre estado">
+                <input class="col-lg " style="margin-top: 1rem;" type="text" nbInput status="primary"
+                    [(ngModel)]="obj.leer" placeholder="Simbolo a leer">
+                <input class="col-lg " style="margin-top: 1rem;" type="text" nbInput status="primary"
+                    [(ngModel)]="obj.escribir" placeholder="Simbolo a escribir">
+                <input class="col-lg " style="margin-top: 1rem;" type="text" nbInput status="primary"
+                    [(ngModel)]="obj.mov" placeholder="Movimiento a realizar">
+                <input class="col-lg " style="margin-top: 1rem;" type="text" nbInput status="primary"
+                    [(ngModel)]="obj.estadoSig" placeholder="Siguiente estado">
+            </div>
+            <button style="margin-top: 1rem;" nbButton outline (click)="ejecutar()">Ejecutar</button>
+        </div>
+        <div *ngIf="bolRes">
+            <h3>Resultados: </h3>
+            <p *ngFor="let res of listResult">{{res}}</p>
+        </div>
+    </nb-card-body>
+</nb-card>
